@@ -1,0 +1,1 @@
+# himalaya-shelter-static-file
