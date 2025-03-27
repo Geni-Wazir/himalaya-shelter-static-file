@@ -1,0 +1,52 @@
+/* ---- grid-item ---- */
+
+.grid-item {
+    padding: 2px;
+}
+
+.grid-item-blog {
+    padding: 0px;
+    margin: 0rem 0.5rem 1rem 0.5rem;
+}
+
+
+.outline-text {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+
+
+figure.image {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin: 20px 0 !important;
+}
+
+figure.image img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+figure.image figcaption {
+  text-align: center !important;
+  color: #95a1a2 !important;
+  font-weight: 6px !important;
+  margin-top: 10px !important;
+  font-style: italic !important;
+  width: 100% !important;
+}
+
+
+/* Hide horizontal scrollbar */
+#trekCardWrapper::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+  }
+
+  /* For Firefox */
+  #trekCardWrapper {
+    scrollbar-width: none; /* Hide the scrollbar */
+  }
+
+  
