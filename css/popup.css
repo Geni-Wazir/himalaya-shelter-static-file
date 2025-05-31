@@ -39,13 +39,17 @@
 .mfp-align-top .mfp-container:before {
   display: none; }
 
-.mfp-content {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 auto;
-  text-align: left;
-  z-index: 1045; }
+  .mfp-content {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+    text-align: left;
+    max-height: 650px;  /* Set maximum height */
+    z-index: 1045;
+    overflow: auto;     /* Optional: enables scroll if content exceeds max height */
+  }
+  
 
 .mfp-inline-holder .mfp-content,
 .mfp-ajax-holder .mfp-content {
@@ -266,7 +270,7 @@ img.mfp-img {
     height: auto;
     z-index: -1;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-    background: #444; }
+    background: #44444400; }
   .mfp-figure small {
     color: #BDBDBD;
     display: block;
@@ -285,6 +289,7 @@ img.mfp-img {
 
 .mfp-title {
   text-align: left;
+  margin-left: 10px;
   line-height: 18px;
   color: #F3F3F3;
   word-wrap: break-word;
