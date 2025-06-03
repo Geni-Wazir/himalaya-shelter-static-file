@@ -45,7 +45,6 @@
     vertical-align: middle;
     margin: 0 auto;
     text-align: left;
-    max-height: 650px;  /* Set maximum height */
     z-index: 1045;
     overflow: hidden;     /* Optional: enables scroll if content exceeds max height */
   }
@@ -248,7 +247,6 @@ button::-moz-focus-inner {
 /* Main image in popup */
 img.mfp-img {
   width: 100%;
-  max-height: 650px;
   display: block;
   line-height: 0;
   box-sizing: border-box;
