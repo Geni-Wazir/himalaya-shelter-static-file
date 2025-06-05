@@ -667,20 +667,27 @@ function getOrdinal(n) {
 }
 
 // Function to extract unique months from the data and generate the accordion
+// Function to extract unique months from the data and generate the accordion
 function generateAccordionFromData(container, datesData, trekTitle) {
     const monthsMap = new Map();
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // normalize to midnight for accurate comparison
 
-    // Group dates by month and year
+    // Filter out past dates and group future dates by month and year
     datesData.forEach(item => {
         const date = new Date(item.date);
-        const month = date.getMonth();
-        const year = date.getFullYear();
-        const key = `${year}-${month}`;
+        date.setHours(0, 0, 0, 0); // normalize
 
-        if (!monthsMap.has(key)) {
-            monthsMap.set(key, []);
+        if (date >= today) {
+            const month = date.getMonth();
+            const year = date.getFullYear();
+            const key = `${year}-${month}`;
+
+            if (!monthsMap.has(key)) {
+                monthsMap.set(key, []);
+            }
+            monthsMap.get(key).push(item);
         }
-        monthsMap.get(key).push(item);
     });
 
     // Sort keys by year and month to ensure ascending order
@@ -696,6 +703,7 @@ function generateAccordionFromData(container, datesData, trekTitle) {
         generateAccordionContent(container, month, year, monthsMap.get(key), trekTitle);
     });
 }
+
 
 // Fetch and parse the dates data for each container
 document.addEventListener("DOMContentLoaded", function () {
