@@ -186,6 +186,7 @@ function initializeSections() {
 function logSections() {
     const content = document.getElementById('content');
     content.value = JSON.stringify(sections, null, 2);
+    console.log(sections)
 }
 
 // Function to add a new section
@@ -200,7 +201,7 @@ function addSection(title = '', content = '', sectionId = `section-${sectionCoun
 
     // Inner HTML for title input and content textarea
     section.innerHTML = `
-    <button class="absolute top-2 right-2 text-red-500 hover:text-red-700" onclick="removeSection('${sectionId}')">
+    <button type="button" class="absolute top-2 right-2 text-red-500 hover:text-red-700" onclick="removeTrekSection('${sectionId}')">
       &#10005;
     </button>
     <div>
@@ -242,9 +243,9 @@ function addSection(title = '', content = '', sectionId = `section-${sectionCoun
 }
 
 // Function to remove a section
-function removeSection(sectionId) {
-    document.getElementById(sectionId).remove();
+function removeTrekSection(sectionId) {
     sections = sections.filter(section => section.id !== sectionId);
+    document.getElementById(sectionId).remove();
     logSections();
 }
 
@@ -667,7 +668,6 @@ function getOrdinal(n) {
 }
 
 // Function to extract unique months from the data and generate the accordion
-// Function to extract unique months from the data and generate the accordion
 function generateAccordionFromData(container, datesData, trekTitle) {
     const monthsMap = new Map();
     const today = new Date();
@@ -703,7 +703,6 @@ function generateAccordionFromData(container, datesData, trekTitle) {
         generateAccordionContent(container, month, year, monthsMap.get(key), trekTitle);
     });
 }
-
 
 // Fetch and parse the dates data for each container
 document.addEventListener("DOMContentLoaded", function () {
