@@ -186,7 +186,6 @@ function initializeSections() {
 function logSections() {
     const content = document.getElementById('content');
     content.value = JSON.stringify(sections, null, 2);
-    console.log(sections)
 }
 
 // Function to add a new section
@@ -201,7 +200,7 @@ function addSection(title = '', content = '', sectionId = `section-${sectionCoun
 
     // Inner HTML for title input and content textarea
     section.innerHTML = `
-    <button type="button" class="absolute top-2 right-2 text-red-500 hover:text-red-700" onclick="removeTrekSection('${sectionId}')">
+    <button class="absolute top-2 right-2 text-red-500 hover:text-red-700" onclick="removeTrekSection('${sectionId}')">
       &#10005;
     </button>
     <div>
