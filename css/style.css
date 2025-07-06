@@ -132,7 +132,7 @@ h1 {
 h2 {
     font-size: 36px;
     font-weight: 600;
-    line-height: 10px;
+    line-height: 35px;
 }
 
 h3 {
@@ -5357,18 +5357,18 @@ cursor:pointer;
 ================================*/
 .news_details_content_area h2 {
     padding-top: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     line-height: 54px;
 }
 
 .news_details_content_area p {
     padding-top: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 
 .news_details_content_area h3 {
     padding-top: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     font-weight: 500;
 }
 
